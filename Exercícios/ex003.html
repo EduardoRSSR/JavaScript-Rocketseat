@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Rocketseat</title>
+</head>
+<body>
+    
+    <div id="app">
+        
+    
+    </div>
+
+    <div id="mostra"> </div>
+
+
+<script>
+
+var app = window.document.getElementById('app');
+  app.style.width=100;
+  app.style.height=100;
+  
+
+    var createText = document.createElement('input');
+    createText.setAttribute('type', 'text');
+    createText.setAttribute('id', 'txtnome');
+  
+    app.appendChild(createText);
+    
+    var createButton = document.createElement('input');
+    createButton.setAttribute('type', 'button');
+    createButton.setAttribute('id', 'txtbotao');
+    createButton.setAttribute('value','Clique para adicionar um nome');
+
+    app.appendChild(createButton);
+
+    var createButton2 = document.createElement('input');
+    createButton2.setAttribute('type', 'button');
+    createButton2.setAttribute('id', 'txtbotao2');
+    createButton2.setAttribute('value','Clique para remover um nome');
+    
+    app.appendChild(createButton2);
+
+   var clicou = window.document.getElementById('txtbotao');
+   var clicou2 = window.document.getElementById('txtbotao2');
+
+   clicou.onclick = function mostranome(){
+        var nome = (window.document.querySelector('input#txtnome')).value;
+        var mostrar = window.document.getElementById('mostra');
+        mostrar.innerHTML=(`${nome}`)  
+    }
+  
+    clicou2.onclick = function mostranome(){
+        var mostrar = window.document.getElementById('mostra');
+      mostrar.innerHTML='' 
+      }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Rocketseat</title>
+</head>
+<body>
+    
+    <div id="app">
+        <input type="text" name="txtnome" id="txtnome"> </input>
+        <input type="button" value="Adicionar" id="botao"> </input>
+    
+    </div>
+
+    <div id="mostra"> </div>
+    
+    <div id="mostra2"> 
+        <br><a href="https://www.youtube.com"> Clique para acessar o YouTube.</a>
+    </div>
+
+
+
+<script>
+
+    
+ 
+  var linkElement = document.createElement('a');
+  linkElement.setAttribute('href','https://wwww.facebook.com');
+
+  var textElement = document.createTextNode('Clique para acessar Facebook.');
+  linkElement.appendChild(textElement) ;
+
+  var containerElement = window.document.getElementById('mostra2');
+  containerElement.appendChild(linkElement);
+
+   var clicou = window.document.getElementById('botao');
+   clicou.onclick = function mostranome(){
+        var nome = (window.document.querySelector('input#txtnome')).value;
+        var mostrar = window.document.getElementById('mostra');
+        mostrar.innerHTML=(`${nome}`)  
+    }
+
+ 
+
+ 
+
+</script>
+</body>
+</html>
